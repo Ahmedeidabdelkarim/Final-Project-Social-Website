@@ -416,9 +416,10 @@ function confirmPostDelete(){
     modalInstance.hide();
 
     showAlert("The Post Has Been Deleted Successfully","success");
+    getUserPosts();
     getPosts();
     getUser();
-    getUserPosts();
+    
   }).catch(error=>{
     const message=error.reponse.data.message;
     showAlert(message,"danger")
