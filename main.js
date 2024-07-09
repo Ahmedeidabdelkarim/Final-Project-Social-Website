@@ -417,8 +417,8 @@ function confirmPostDelete(){
 
     showAlert("The Post Has Been Deleted Successfully","success");
     getUserPosts();
-    getUser();
     getPosts();
+    getUser();
     
   }).catch(error=>{
     const message=error.reponse.data.message;
